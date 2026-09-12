@@ -34,7 +34,6 @@ AB_OTA_PARTITIONS += \
     pvmfw \
     tzsw \
     ldfw
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -114,7 +113,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_NO_RECOVERY := true
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/prebuilt/recovery.wipe
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/system/etc/recovery.wipe
 BOARD_RECOVERY_SNAPSHOT := false
 
 # Security patch level
