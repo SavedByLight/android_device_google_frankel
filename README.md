@@ -1,8 +1,2 @@
-# Android device tree for google Generic System (generic)
-
-```
-#
-# SPDX-FileCopyrightText: The LineageOS Project
-# SPDX-License-Identifier: Apache-2.0
-#
-```
+# android_device_google_frankel
+Google Pixel 10
