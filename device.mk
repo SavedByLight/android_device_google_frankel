@@ -6,15 +6,21 @@
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# Boot control HAL (Pixel-specific implementation)
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.2-service-pixel \
+    android.hardware.boot@1.2-impl-pixel
 
+# Core packages
 PRODUCT_PACKAGES += \
+    fastbootd \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+# Vendor services
+PRODUCT_PACKAGES += \
+    bootctl
 
 PRODUCT_PACKAGES += \
     checkpoint_gc \

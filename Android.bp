@@ -4,4 +4,7 @@
 //
 
 soong_namespace {
+imports: [
+        "device/google/frankel/bootctrl/1.2",
+    ],
 }
