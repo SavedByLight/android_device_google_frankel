@@ -79,6 +79,14 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_SEPARATED_DTBO := true
 
+# mkbootimg
+BOARD_MKBOOTIMG_ARGS:= \
+--kernel_offset=0x00008000 \
+--ramdisk_offset=0x01000000 \
+--tags_offset=0x00000100 \
+--dtb_offset=0x01f00000 \
+--header_version=$(BOARD_BOOTIMG_HEADER_VERSION) \
+
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
