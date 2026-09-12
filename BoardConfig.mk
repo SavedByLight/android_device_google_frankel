@@ -84,7 +84,7 @@ BOARD_MKBOOTIMG_ARGS:= \
 --ramdisk_offset=0x01000000 \
 --tags_offset=0x00000100 \
 --dtb_offset=0x01f00000 \
---header_version=$(BOARD_BOOTIMG_HEADER_VERSION) \
+--header_version=$(BOARD_BOOT_HEADER_VERSION) \
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
